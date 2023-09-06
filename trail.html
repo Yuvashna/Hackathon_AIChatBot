@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ALEX - YOUR WELLNESS GURU</title>
+<style>
+    body{
+        background-color: #fce9ff;
+    }
+
+    .center-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+</style>
+
+<body>
+    
+    <div class="center-container">
+    <iframe
+    
+    allow="microphone;"
+    width="400"
+    height="650"
+    src="https://console.dialogflow.com/api-client/demo/embedded/f81aef76-d68c-4428-bbf9-445404c8e258">
+    </iframe>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("dialogflow-iframe").addEventListener("load", function () {
+            
+            const iframeContent = this.contentDocument;
+
+           
+            function readAndCheckResponses() {
+                const responseElements = iframeContent.querySelectorAll(".df-response-text");
+                for (const responseElement of responseElements) {
+                    const responseText = responseElement.innerText;
+                    console.log("Dialogflow Response:", responseText);
+
+                    
+                    if (responseText.includes("yes")) {
+                        
+                        console.log("Important word detected!");
+                    }
+                }
+            }
+
+            
+            const observer = new MutationObserver(readAndCheckResponses);
+            observer.observe(iframeContent, { childList: true, subtree: true });
+        });
+    });
+        
+    </script>
+
+<script>
+    
+    const delayMilliseconds = 40000;
+    
+    function redirectToPage() {
+      window.location.href = 'results.html'; 
+    }
+    setTimeout(redirectToPage, delayMilliseconds);
+  </script>
+
+</body>
+</head>
+</html>

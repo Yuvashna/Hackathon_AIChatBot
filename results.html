@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<!--
+	
+-->
+<html>
+	<head>
+		<title>Guardian Hearts Initiative</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo2.svg" alt="" /></span><span class="title">Guardian Hearts Initiative</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="aboutus.html">About Us</a></li>
+							
+							<li><a href="supportiveresources.html">Supportive Resources</a></li>
+							
+						</ul>
+					</nav>
+
+		
+					<div id="main">
+						<div class="inner">
+							<p></p>
+							<h1>Results</h1>
+							
+							<p>
+								<div class="odometer" id="odometer">0%</div>
+
+  <script>
+    const desiredPercentage = 75;
+
+ 
+    const odometerElement = document.getElementById('odometer');
+
+   
+    function animateOdometer(targetPercentage) {
+      const duration = 3000; 
+      const start = 0;
+      const increment = targetPercentage / (duration / 10); 
+
+      let currentPercentage = start;
+      const interval = setInterval(() => {
+        currentPercentage += increment;
+        odometerElement.innerText = `${Math.min(currentPercentage, targetPercentage).toFixed(0)}%`;
+
+        if (currentPercentage >= targetPercentage) {
+          clearInterval(interval);
+        }
+      }, 10);
+    }
+
+
+    animateOdometer(desiredPercentage);
+  </script>
+
+  							This percentage displays the likelyhood of your relationship leading to Gender-Based Violence.
+							</p>
+						</div>
+					</div>
+
+				<!-- Footer -->
+                <footer id="footer">
+                    <div class="inner">
+                    
+                        <section>
+                            <h2>Get in touch</h2>
+                            <i class="fa fa-envelope"> </i> <span> &nbsp;  Email: ghinitiative@gmail.com </span>
+                            <p><i class="fa fa-phone"> </i> <span> &nbsp;  Contact Number: (031) 207 1234 </span></p>
+                        </section>
+                        
+                        <ul class="copyright">
+                            <li>&copy; Guardian Hearts Initiative. All rights reserved</li><li>
+                        </ul>
+                    </div>
+                </footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
