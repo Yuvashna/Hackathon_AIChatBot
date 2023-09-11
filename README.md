@@ -7,7 +7,7 @@ they are in is abusive.
 
 The application was made in a span of 24 hours and still needs some improvement.
 
-### Screenshots of game
+### Screenshots of the website
 <div align="center">
 <p>
   <img width="800" src="https://github.com/Yuvashna/Hackathon_AIChatBot/assets/100693356/13e38c38-6ab0-421b-a471-efedc9410c67">
